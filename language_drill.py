@@ -5,11 +5,11 @@ vocab = {}
 file_name = input("Please enter file name e.g. 'vocab.csv'\n")
 
 with open(file_name, newline='') as csvfile:
-    vocab_file = csv.reader(csvfile, delimiter=';', quotechar='|')
+    vocab_file = csv.reader(csvfile, delimiter=',', quotechar='|')
     for row in vocab_file:
         vocab[row[0]] = row[1]
 
-print("Ready? Here we go!\n")
+print("\nReady? Here we go...\n")
 
 for word in vocab:
     
@@ -21,4 +21,4 @@ for word in vocab:
             print("'"+word+"' is '"+vocab[word]+"'")
             break
 
-print("\nYou've drilled",len(vocab),"words! Good job!")
+print("\nGood job! You've drilled",len(vocab),"words!")
